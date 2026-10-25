@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- Terminal Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/bg_terminal_header">
+
+        <TextView
+            android:id="@+id/tvTerminalTarget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="shell@localhost:~$"
+            android:textColor="@color/accent_cyan"
+            android:fontFamily="monospace"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Clear Action -->
+        <ImageButton
+            android:id="@+id/btnClearTerminal"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_clear"
+            app:tint="@color/text_secondary"
+            android:contentDescription="Clear Terminal" />
+
+        <!-- Copy Action -->
+        <ImageButton
+            android:id="@+id/btnCopyTerminal"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_copy"
+            app:tint="@color/text_secondary"
+            android:contentDescription="Copy All" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_subtle" />
+
+    <!-- Terminal Console Output Screen -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTerminal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_terminal"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:scrollbars="vertical" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_subtle" />
+
+    <!-- Quick Command Chips Carousel -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:background="@color/bg_surface">
+
+        <LinearLayout
+            android:id="@+id/llChipsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/chipTcpip5555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="📶 TCP/IP 5555"
+                android:textColor="@color/accent_green"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipDeviceInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="📱 Device Info"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="🔋 Battery Info"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipApps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="📦 User Packages"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipScreenSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="📐 Screen Size"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipScreenDensity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="🎯 Screen DPI"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="⚡ Top CPU"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipDisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="💾 Disk Space"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipLogcat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_command"
+                android:text="📋 Logcat 30"
+                android:textColor="@color/accent_cyan"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_subtle" />
+
+    <!-- Bottom Command Input Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:background="@color/bg_surface">
+
+        <!-- History Navigation Buttons -->
+        <ImageButton
+            android:id="@+id/btnHistoryUp"
+            android:layout_width="34dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_history_up"
+            app:tint="@color/text_secondary"
+            android:contentDescription="History Up" />
+
+        <ImageButton
+            android:id="@+id/btnHistoryDown"
+            android:layout_width="34dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_history_down"
+            app:tint="@color/text_secondary"
+            android:contentDescription="History Down" />
+
+        <!-- Command Input Field -->
+        <EditText
+            android:id="@+id/etCommandLine"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Enter command (e.g. pm list packages)"
+            android:textColorHint="@color/text_tertiary"
+            android:textColor="@color/text_primary"
+            android:fontFamily="monospace"
+            android:textSize="13sp"
+            android:inputType="textNoSuggestions"
+            android:imeOptions="actionSend"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <!-- Run Command Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRunCommand"
+            android:layout_width="70dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_button_cyan"
+            android:text="@string/action_run"
+            android:textColor="@color/bg_dark"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

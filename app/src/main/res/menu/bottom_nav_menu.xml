@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_connect"
+        android:icon="@drawable/ic_wifi_adb"
+        android:title="@string/title_tab_connect" />
+    <item
+        android:id="@+id/nav_terminal"
+        android:icon="@drawable/ic_terminal"
+        android:title="@string/title_tab_terminal" />
+    <item
+        android:id="@+id/nav_toolbox"
+        android:icon="@drawable/ic_toolbox"
+        android:title="@string/title_tab_toolbox" />
+</menu>

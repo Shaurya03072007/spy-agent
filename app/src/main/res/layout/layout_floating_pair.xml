@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/floatingRoot"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_floating_card"
+    android:elevation="16dp"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Header bar (Draggable) -->
+    <LinearLayout
+        android:id="@+id/layoutFloatingHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_wifi_adb"
+            app:tint="@color/accent_cyan" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:letterSpacing="0.06"
+            android:text="PAIRING HELPER (DRAG ME)"
+            android:textColor="@color/accent_cyan"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnFloatingClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/accent_red" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_subtle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Type pairing port &amp; 6-digit code shown in the dialog:"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+
+    <!-- Inputs Row: Pair Port & 6-Digit Code -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pair Port"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/etFloatingPairPort"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="37123"
+                android:inputType="number"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_tertiary"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1.3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6-Digit Code"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/etFloatingPairCode"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="123456"
+                android:inputType="number"
+                android:letterSpacing="0.08"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/accent_amber"
+                android:textColorHint="@color/text_tertiary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Connect Port (Auto or manual) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect Port:"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/etFloatingConnectPort"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input_field"
+            android:hint="Main port (e.g. 41235)"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/accent_cyan"
+            android:textColorHint="@color/text_tertiary"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Pair Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFloatingPair"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button_emerald"
+        android:text="⚡ Pair &amp; Connect"
+        android:textAllCaps="false"
+        android:textColor="@color/bg_dark"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- Status feedback -->
+    <TextView
+        android:id="@+id/tvFloatingStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Ready. Move window to view pairing code."
+        android:textColor="@color/accent_cyan"
+        android:textSize="11sp" />
+</LinearLayout>

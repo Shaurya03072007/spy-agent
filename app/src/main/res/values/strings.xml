@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Wireless ADB Shell</string>
+    <string name="status_disconnected">DISCONNECTED</string>
+    <string name="status_pairing">PAIRING…</string>
+    <string name="status_connecting">CONNECTING…</string>
+    <string name="status_connected">CONNECTED</string>
+    <string name="action_open_dev_settings">Open Developer Settings</string>
+    <string name="action_pair">Pair Device</string>
+    <string name="action_connect">Connect</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="action_run">RUN</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_copy">Copy</string>
+    <string name="title_tab_connect">Wireless Pair</string>
+    <string name="title_tab_terminal">Terminal</string>
+    <string name="title_tab_toolbox">Toolbox</string>
+</resources>

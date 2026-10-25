@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="bg_dark">#0B0F19</color>
+    <color name="bg_surface">#131B2B</color>
+    <color name="bg_surface_elevated">#1A2438</color>
+    <color name="bg_terminal">#080C14</color>
+    <color name="bg_terminal_header">#0F1522</color>
+
+    <!-- Borders & Dividers -->
+    <color name="border_subtle">#222F47</color>
+    <color name="border_highlight">#384D73</color>
+
+    <!-- Accents -->
+    <color name="accent_cyan">#00E5FF</color>
+    <color name="accent_cyan_dark">#00B0FF</color>
+    <color name="accent_cyan_glow">#3300E5FF</color>
+    <color name="accent_green">#00E676</color>
+    <color name="accent_green_glow">#3300E676</color>
+    <color name="accent_amber">#FFB300</color>
+    <color name="accent_amber_glow">#33FFB300</color>
+    <color name="accent_red">#FF5252</color>
+    <color name="accent_red_glow">#33FF5252</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#F0F6FC</color>
+    <color name="text_secondary">#8B949E</color>
+    <color name="text_tertiary">#6E7681</color>
+    <color name="text_terminal_prompt">#00E5FF</color>
+    <color name="text_terminal_output">#C9D1D9</color>
+    <color name="text_terminal_error">#FF7B72</color>
+    <color name="text_terminal_success">#7EE787</color>
+    <color name="text_terminal_info">#79C0FF</color>
+
+    <!-- Standard Material Fallbacks -->
+    <color name="purple_200">#00E5FF</color>
+    <color name="purple_500">#00B0FF</color>
+    <color name="purple_700">#0B0F19</color>
+    <color name="teal_200">#00E676</color>
+    <color name="teal_700">#00E5FF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
